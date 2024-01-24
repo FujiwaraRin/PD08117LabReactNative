@@ -1,14 +1,12 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React, {useState} from 'react';
 import Input from '../Component/Input';
-import TextHeader from '../Component/TextHeaderLogin';
-import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import Checkbox from '../Component/Checkbox';
 import Button from '../Component/Button';
 import Seperator from '../Component/Seperator';
 import SocialLogin from '../Component/FB&GG Button';
 
-const Login = () => {
+const Login = ({onPress}) => {
   const [checked, setChecked] = useState(false);
   const onSignin = () => {
     console.log('test signin');
@@ -28,7 +26,9 @@ const Login = () => {
         <Checkbox checked={checked} onCheck={setChecked}></Checkbox>
         <Text style={styles.checkText}> I agree with Terns & Privacy</Text>
       </View>
-      <Button style={styles.button} title="Sign Up"></Button>
+      <Button
+    
+      style={styles.button} title="Sign Up"></Button>
       <Seperator text="or continue with"></Seperator>
       <SocialLogin></SocialLogin>
 

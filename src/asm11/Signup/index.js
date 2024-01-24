@@ -8,7 +8,8 @@ import Button from '../Component/Button';
 import Seperator from '../Component/Seperator';
 import SocialLogin from '../Component/FB&GG Button';
 
-const Signup = () => {
+const Signup = ({onPress}) => {
+
   const[checked, setChecked]=useState(false)
   const onSignin = () =>{
     console.log('test signin')
